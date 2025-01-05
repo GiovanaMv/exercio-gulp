@@ -1,4 +1,3 @@
-// Importação dos módulos necessários
 const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const sourcemaps = require('gulp-sourcemaps');
@@ -21,7 +20,6 @@ const paths = {
     }
 };
 
-// Compilar SASS com sourcemaps
 function compilaSass() {
     return gulp.src(paths.styles.src)
         .pipe(sourcemaps.init()) // Inicializa o sourcemap
@@ -30,7 +28,6 @@ function compilaSass() {
         .pipe(gulp.dest(paths.styles.dest)); // Salva na pasta destino
 }
 
-// Comprimir imagens
 function comprimeImagens() {
     return gulp.src(paths.images.src)
         .pipe(imagemin()) // Comprime as imagens
@@ -44,7 +41,7 @@ function comprimeJavaScript() {
         .pipe(gulp.dest(paths.scripts.dest)); // Salva na pasta destino
 }
 
-// Tarefa padrão que executa todas as tarefas
+// Tarefa padrão 
 function tarefaPadrao(callback) {
     console.log("Executando todas as tarefas com Gulp!");
     callback();

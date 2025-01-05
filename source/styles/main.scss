@@ -1,0 +1,15 @@
+body { background-color: pink;}
+.container { justify-content: center;
+    h1 {color:#e24902;}
+    #clickMe {
+        border: none; background-color: #9d26ff; transition: background 0.3 ease, transform 0.2s; font-weight: bold; padding: 10px; color:#9efc5f;
+            &:hover {background: #90fda2; transform: scale(1.05); color: rgb(58, 58, 58)}
+    }
+    #message {
+        text-align: center; margin-top: 15px;margin-bottom: 0px; font-weight: bold;
+    }
+}
+
+
+
+
